@@ -46,15 +46,15 @@
 
 ### MiniMax H3：多参考图生视频
 
-| 类型 | 原工作流选项 / 匹配说明 | 目录 |
+| 类型 | 作者工作流配置 | 目录 |
 |---|---|---|
-| 主模型 | 原选中 `minimax_h3_fl2va_int8_convrot.safetensors`；多参考图节点应核对并选择匹配的 **ref2va** 系列，官方示例使用 `minimax_h3_ref2va_pruned_int8_convrot.safetensors` | `diffusion_models/` |
+| 主模型 | `minimax_h3_fl2va_int8_convrot.safetensors`（作者确认使用FL2VA） | `diffusion_models/` |
 | 文本编码器 | `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors` | `text_encoders/` |
 | 视频VAE | `minimax_h3_video_vae_fp16.safetensors` | `vae/` |
 | 音频VAE | `minimax_h3_audio_vae_fp32.safetensors` | `vae/` |
 | 加速LoRA | `minimax_h3_turbo_4步加速_comfyui.safetensors`，本地命名，来源与底模兼容性需核对 | `loras/` |
 
-模型：[Comfy-Org/MiniMax-H3](https://huggingface.co/Comfy-Org/MiniMax-H3)。匹配原则：[ComfyUI H3官方指南](https://docs.comfy.org/tutorials/video/minimax/minimax-h3)。多参考图与首尾帧是不同模式；不要仅因为文件都是H3就混用。LoRA也要匹配相应底模，不能只靠本地中文文件名判断。
+模型：[Comfy-Org/MiniMax-H3](https://huggingface.co/Comfy-Org/MiniMax-H3)。本项目组合工作流按作者确认使用 **FL2VA**，保留上表主模型选择。下方官方模板是独立的入门路线，不用于替换作者组合工作流的模型配置。LoRA按作者所用底模与配套配置选择。
 
 首次接通可用官方Reference-to-Video模板建立基线，再添加自定义加速。当前没有为本项目实测最低显存、速度或硬件下限；量化、卸载、分辨率与帧数都会影响资源需求。
 
@@ -100,7 +100,7 @@
 
 ## 导入原工作流后先核对
 
-1. H3的UNET实际下拉选中值与节点模式一致：作者JSON的模型元数据写ref2va，实际选项却为fl2va，不能只看下载提示。
+1. H3主模型保留作者确认的 `minimax_h3_fl2va_int8_convrot.safetensors`（FL2VA）。JSON的下载元数据与实际下拉值不同时，本组合工作流以作者确认的实际选项为准。
 2. Qwen编辑编码链实际连接8B文本编码器；未连接的9B PE模型不必为运行该分支下载。
 3. Z-Image本地VAE命名与官方不同，按来源选择文件，不猜测二者等价。
 4. 没有作者风格LoRA时旁路；去掉加速LoRA同时调整采样配置。

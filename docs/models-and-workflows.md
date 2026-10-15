@@ -2,6 +2,19 @@
 
 本页按作者提供的「AI短剧制作全流程」工作流静态核对，并结合官方模型说明整理（2026-10-15）。文件名反映工作流选项，不代表它们都必需下载，也不代表该组合已实测通过。
 
+## 工作流体验与下载
+
+### 云端版本
+
+| 版本 | 工作流名称 | 体验地址 |
+|---|---|---|
+| 国内工作流 | 【Work-Fisher】AI短剧制作全流程 | [RunningHub 国内站体验](https://www.runninghub.cn/post/2109735475824123905/?inviteCode=cn-v1078) |
+| 国外工作流 | 【Work-Fisher】AI短剧制作全流程 | [RunningHub 国际站体验](https://www.runninghub.ai/zh-cn/post/2110330293312188418/?inviteCode=rh-v1270) |
+
+### 本地版本
+
+**【Work-Fisher】AI短剧制作全流程**：[夸克网盘下载](https://pan.quark.cn/s/dd44d9da44da)
+
 ## 制作分工
 
 1. 对话助手加载Skill，读取剧本，输出角色提示词。

@@ -10,6 +10,19 @@
 
 **15秒 / 段 · 固定3–4镜头 · 每镜1–2机位 · 中文交付**
 
+## 工作流体验与下载
+
+### 云端版本
+
+| 版本 | 工作流名称 | 体验地址 |
+|---|---|---|
+| 国内工作流 | 【Work-Fisher】AI短剧制作全流程 | [RunningHub 国内站体验](https://www.runninghub.cn/post/2109735475824123905/?inviteCode=cn-v1078) |
+| 国外工作流 | 【Work-Fisher】AI短剧制作全流程 | [RunningHub 国际站体验](https://www.runninghub.ai/zh-cn/post/2110330293312188418/?inviteCode=rh-v1270) |
+
+### 本地版本
+
+**【Work-Fisher】AI短剧制作全流程**：[夸克网盘下载](https://pan.quark.cn/s/dd44d9da44da)
+
 ## 怎么用
 
 ![三阶段交互动态示意，非真实生成视频](docs/assets/workflow-demo.gif)
@@ -43,7 +56,7 @@ Skill负责写提示词，**ComfyUI工作流负责运行模型**；还需要一�
 - [ComfyUI工作流选择、分组操作与7个插件](docs/models-and-workflows.md#工作流怎么衔接)
 - [原工作流的模型选项注意事项](docs/models-and-workflows.md#导入原工作流后先核对)
 
-本仓库提供Skill与接入指南，不附带模型权重或整合环境。当前未发布作者原始业务工作流JSON；指南给出官方工作流入口，并说明如何与作者的组合工作流衔接。
+本仓库提供Skill与接入指南；配套工作流可通过上方RunningHub云端入口体验，或从夸克网盘获取本地版本。模型权重不随本Git仓库分发。
 
 ## 快速开始
 
